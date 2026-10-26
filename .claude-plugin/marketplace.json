@@ -1,0 +1,11 @@
+{
+  "name": "perro",
+  "owner": { "name": "André Santos" },
+  "plugins": [
+    {
+      "name": "perro",
+      "source": "./",
+      "description": "Harness para facilitar workflow de trabalho."
+    }
+  ]
+}
