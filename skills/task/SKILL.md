@@ -49,6 +49,14 @@ Conteúdo:
 - **Branch:** <ID>/<slug>
 - **Criado em:** <AAAA-MM-DD>
 
+## Problema
+
+- **Situação atual:** <o que acontece hoje>
+- **Comportamento esperado:** <o que deveria acontecer>
+- **Impacto:** <quem é afetado e como>
+- **Onde ocorre:** <tela, fluxo, serviço ou pipeline envolvido>
+- **Como reproduzir:** <passos, se for bug; senão "Não se aplica">
+
 ## Objetivo
 
 <resumo em 2-3 frases do que precisa ser feito e por quê>
@@ -68,14 +76,36 @@ Conteúdo:
 ## Lacunas
 
 <o que está ambíguo ou faltando na task e precisa ser esclarecido>
+
+## Revisão
+
+<resultado da revisão analítica do passo 4>
 ```
 
 Ao escrever o documento:
 
 - Não copie dados de clientes, e-mails, telefones, documentos ou tokens que apareçam na task. Substitua por `[removido]`.
 - A seção **Lacunas** é obrigatória e deve ser honesta; é ela que alimenta a análise seguinte.
+- No **Problema**, escreva só o que a task sustenta. Se um campo não puder ser preenchido com base nela, escreva "Não informado na task" e registre em Lacunas.
 
-## 4. Finalizar
+## 4. Revisar o documento
 
-Responda em poucas linhas: branch criada, caminho do documento e as lacunas encontradas.
+Releia o documento como um revisor cético, não como quem o escreveu. Verifique:
+
+1. **Rastreabilidade:** cada afirmação vem da task? Marque com `(inferido)` o que for dedução sua e não estiver explícito.
+2. **Coerência:** o Objetivo resolve o Problema descrito? Os Critérios de aceite comprovam que o Objetivo foi atingido?
+3. **Completude:** falta algo que impediria começar a implementar? Se sim, vai para Lacunas.
+4. **Contradições:** descrição, comentários e critérios dizem coisas diferentes? Registre qual versão foi usada e por quê.
+5. **Escopo:** o documento está maior que a task? Remova o que não foi pedido.
+
+Corrija o documento com base no que encontrar e preencha a seção **Revisão** com:
+
+- o que foi ajustado
+- o nível de confiança no entendimento: Alto, Médio ou Baixo, com uma frase de justificativa
+
+Se a confiança for Baixa, diga isso no fechamento e recomende esclarecer as lacunas antes do `/analise`.
+
+## 5. Finalizar
+
+Responda em poucas linhas: branch criada, caminho do documento, nível de confiança e as lacunas encontradas.
 Sugira rodar `/analise` em seguida. A skill `analise` deve ler `.harness/tasks/<ID>.md` se existir.
