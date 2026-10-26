@@ -1,6 +1,6 @@
 <!-- LOGO: substitua o caminho abaixo pela sua logo (ex. assets/logo.png) -->
 <p align="center">
-  <img src="assets/logo.png" alt="perro" width="160" />
+  <img src="https://private-user-images.githubusercontent.com/82060320/685357384-b3ae0dc3-d88b-4440-a5e3-e0257219ef6a.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTMwNDk1NTQsIm5iZiI6MTc5MzA0OTI1NCwicGF0aCI6Ii84MjA2MDMyMC82ODUzNTczODQtYjNhZTBkYzMtZDg4Yi00NDQwLWE1ZTMtZTAyNTcyMTllZjZhLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjEwMjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMDI2VDIxMTQxNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTk5NTRlODgzYzBjMjliZGRjNTJiMDFhNzcyYWZhNjEzYjQwNWNlMmFjN2MxODE1OTJjNmI4NzVkYWZlMTdiY2ImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.rs2FGFBzCtQaAZt5RrpYZ4H6q4t-0q51GIlRfCTYYSM" alt="perro" width="160" />
 </p>
 
 <h1 align="center">perro</h1>
