@@ -1,7 +1,7 @@
 {
   "name": "perro",
   "description": "A plugin for harnessing the power of flow-based programming in your application.",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "author": {
     "name": "André Santos"
   }

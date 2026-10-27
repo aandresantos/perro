@@ -14,7 +14,7 @@ Transforme uma correção do usuário em um padrão reutilizável.
    - o que o usuário esperava
    - o trecho exato em que ele corrigiu
 2. Generalize: qual regra, se seguida, teria evitado a diferença? Ela precisa servir para tarefas futuras, não só para esta.
-3. Leia `~/harness/memoria/padroes.md`.
+3. Leia `~/Documents/projects/perro/memoria/padroes.md`.
    - Se já existir um padrão parecido, proponha atualizá-lo em vez de criar outro.
    - Se a nova regra conflitar com uma existente, mostre o conflito.
 4. Mostre a proposta no formato abaixo e espere aprovação.

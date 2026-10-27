@@ -46,6 +46,8 @@ A ideia central: **o harness aprende com o seu jeito de trabalhar.** Cada difere
 | `/analise` | Analisa a tarefa antes de codar: tipo, impacto, hipóteses (bugs), alternativas, plano de validação e nível de confiança |
 | `/status <texto>` | Publica `dia DD/MM - <texto>` como comentário na task e, se você pedir, troca o status |
 | `/memorizar` | Transforma uma correção sua em padrão, salvo em `memoria/padroes.md` |
+| `/revisao` | Revisa o bloco implementado (erros, contexto da task e testes) e pede permissão para commitar |
+| `/commit` | Commita o bloco com mensagem baseada no diff e no contexto da task, após confirmação |
 
 > [!TIP]
 > Dentro do plugin, o Claude Code pode exibir as skills com prefixo, como `/perro:task`. Mencionar o ID da task na conversa também aciona a skill.
@@ -105,7 +107,10 @@ flowchart LR
     E --> F[(padroes.md)]
     F -.próximas análises.-> B
     C -- sim --> G[Implementação]
-    G --> H["/status"]
+    G --> R["/revisao"]
+    R -- ajustes --> G
+    R -- pronto --> K["/commit"]
+    K --> H["/status"]
 ```
 
 ---
@@ -126,16 +131,16 @@ flowchart LR
 ### 1. Clone o repositório
 
 ```bash
-git clone <url-do-repositorio> ~/harness
+git clone <url-do-repositorio> ~/Documents/projects/perro
 ```
 
 > [!NOTE]
-> As skills leem os padrões em `~/harness/memoria/padroes.md`. Se clonar em outro caminho, ajuste esse caminho nas skills `analise` e `memorizar`.
+> As skills leem os padrões em `~/Documents/projects/perro/memoria/padroes.md`. Se clonar em outro caminho, ajuste esse caminho nas skills `analise` e `memorizar`.
 
 ### 2. Instale no Claude Code
 
 ```
-/plugin marketplace add ~/harness
+/plugin marketplace add ~/Documents/projects/perro
 /plugin install perro@perro
 ```
 
@@ -145,7 +150,7 @@ Abra uma nova sessão e rode `/task` com o ID de uma task para validar.
 <summary><strong>Prefere testar sem instalar?</strong></summary>
 
 ```bash
-cd ~/harness
+cd ~/Documents/projects/perro
 make dev
 ```
 
@@ -173,7 +178,7 @@ make help
 ### Estrutura
 
 ```
-~/harness/
+~/Documents/projects/perro/
 ├── .claude-plugin/
 │   ├── plugin.json          # metadados e versão
 │   └── marketplace.json     # marketplace local
@@ -181,7 +186,9 @@ make help
 │   ├── task/SKILL.md
 │   ├── analise/SKILL.md
 │   ├── status/SKILL.md
-│   └── memorizar/SKILL.md
+│   ├── memorizar/SKILL.md
+│   ├── revisao/SKILL.md
+│   └── commit/SKILL.md
 ├── memoria/
 │   └── padroes.md           # padrões aprendidos
 ├── Makefile
@@ -268,5 +275,4 @@ status: permite trocar status da task
 
 
 ### Skills pendentes
-- adicionar skill para ler o contexto do arquivo da task que irá conter o que já foi implementado para poder escrever o commit
-- adicionar skill também para o funcionamento parecido com o acima, porém alimentar o texto do PR seguindo o template que eu selecionar
+- adicionar skill para escrever o texto do PR com o contexto da task (`.harness/tasks/<ID>.md`), seguindo o template que eu selecionar

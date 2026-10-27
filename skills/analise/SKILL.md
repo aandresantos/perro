@@ -9,7 +9,7 @@ Analise a tarefa antes de escrever qualquer código. Não implemente nada nesta 
 
 ## Antes de começar
 
-Leia `~/harness/memoria/padroes.md`. Aplique cada padrão registrado nesta análise.
+Leia `~/Documents/projects/perro/memoria/padroes.md`. Aplique cada padrão registrado nesta análise.
 Se um padrão parecer conflitar com a tarefa, aponte o conflito em vez de ignorá-lo.
 
 Se existir `.harness/tasks/<ID>.md` para a branch atual (o ID é o prefixo do nome da branch), leia-o e use como contexto da tarefa. Trate as **Lacunas** desse documento na seção Perguntas.
