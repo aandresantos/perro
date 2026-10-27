@@ -264,3 +264,9 @@ status: permite trocar status da task
 <p align="center">
   Feito com ☕ por André Santos
 </p>
+
+
+
+### Skills pendentes
+- adicionar skill para ler o contexto do arquivo da task que irá conter o que já foi implementado para poder escrever o commit
+- adicionar skill também para o funcionamento parecido com o acima, porém alimentar o texto do PR seguindo o template que eu selecionar
