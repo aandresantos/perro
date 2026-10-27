@@ -18,7 +18,7 @@ Se a branch não seguir o padrão e nenhum ID for informado, pergunte.
 Formato:
 
 ```
-dia DD/MM - <status>
+**dia DD/MM** - <status>
 ```
 
 Use a data de hoje, obtida com `date +%d/%m`.
@@ -30,7 +30,7 @@ Use a data de hoje, obtida com `date +%d/%m`.
 Exemplo de tom:
 
 ```
-dia 26/10 - realizei o estudo da task e consegui avançar no entendimento do que precisa ser implementado, já possuo um plano de ação e amanhã iniciarei a implementação
+**26/10**  - realizei o estudo da task e consegui avançar no entendimento do que precisa ser implementado, já possuo um plano de ação e amanhã iniciarei a implementação
 ```
 
 Nunca inclua dados de clientes, tokens, URLs internas ou trechos de código no status.
